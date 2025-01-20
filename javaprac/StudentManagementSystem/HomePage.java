@@ -302,9 +302,11 @@ public class HomePage {
 
             /// verify code
             while (true) {
+                String vc = RandomVerifyingCode.randomVerifyingCode();
+                System.out.println("verifying code is:"+vc);
                 System.out.println("Please enter verifing code:");
                 String verifingCode = sc.next();
-                if (verifingCode.equals("123456")) break;  //modify
+                if (verifingCode.equals(vc)) break;  //modify
                 else System.out.println("verifying code incorrect!");
 
             }
