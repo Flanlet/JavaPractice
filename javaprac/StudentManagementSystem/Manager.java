@@ -24,7 +24,7 @@ public class Manager {
 
     public void setUsername(String username) {
         if (username.length()>15 || username.length()<3) {
-            System.out.println("The length of username should be between 3 to 15.");
+            System.out.println("The length of username should between 3 and 15.");
         }
         else if (username.matches("^\\d+$")){
             System.out.println("Username should include both number and letters.");
