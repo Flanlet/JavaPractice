@@ -5,7 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/javaprac/practice" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/javaprac/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/javaprac/StudentManagementSystem" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/javaprac/StudentManagementSystem" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -10,6 +10,7 @@ public class HomePage {
         ArrayList<Manager> Managerlist = ManagerDataLoader.loadManagerData("managers.txt");
         Scanner sc = new Scanner(System.in);
         boolean isLogin =false;
+        /// loginPage
         while (true) {
             System.out.println("Welcome to SMS!");
             System.out.println("Please select:1.Login in 2.Register 3.Forget password");
@@ -25,8 +26,8 @@ public class HomePage {
 
             if (isLogin) break;
         }
-
-        ArrayList<Student>  studentlist = new ArrayList<>();
+        /// Student Management Page
+        ArrayList<Student> studentlist = StudentDataLoader.loadStudentData("students.txt");
         loop:while (true) {
                 System.out.println("Welcome to Student Management System.");
                 System.out.println("Please select: 1.add student 2.delete student 3.modify student 4.query student information 5.exit");
@@ -87,6 +88,7 @@ public class HomePage {
         student.setAddress(sc.next());
 
         studentlist.add(student);
+        student.saveStudentData("students.txt");
         System.out.println("Student added successfully!");
 
         return studentlist;
@@ -349,7 +351,7 @@ public class HomePage {
             }
 
         }
-        String newpassword = new String();
+        String newpassword;
         if (mg.getPhonenumber().equals(phonenumber)&&mg.getIdnumber().equals(idnumber)){
             System.out.println("Please enther your new password:");
             newpassword = sc.next();

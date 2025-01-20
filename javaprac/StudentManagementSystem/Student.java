@@ -1,3 +1,7 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Student{
 
     private String id;
@@ -45,5 +49,15 @@ public class Student{
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public void saveStudentData(String filename) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
+            // Writing manager data into the file in a readable format (e.g., CSV or simple text)
+            writer.write(this.id + "," + this.name + "," + this.age + "," + this.address);
+            writer.newLine();  // Add a new line for each new record
+        } catch (IOException e) {
+            System.out.println("Error saving manager data: " + e.getMessage());
+        }
     }
 }

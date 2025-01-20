@@ -1,3 +1,7 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class sUser {
     private String username;
     private String password;
@@ -45,4 +49,6 @@ public class sUser {
     public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
     }
+
+
 }
