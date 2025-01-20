@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class HomePage {
     public static void main(String[] args) {
-        ArrayList<Manager> Managerlist = ManagerDataLoader.loadManagerData("managers.txt");
+        ArrayList<Manager> Managerlist = DataLoader.loadManagerData("managers.txt");
         Scanner sc = new Scanner(System.in);
         boolean isLogin =false;
         /// loginPage
@@ -27,7 +27,7 @@ public class HomePage {
             if (isLogin) break;
         }
         /// Student Management Page
-        ArrayList<Student> studentlist = StudentDataLoader.loadStudentData("students.txt");
+        ArrayList<Student> studentlist = DataLoader.loadStudentData("students.txt");
         loop:while (true) {
                 System.out.println("Welcome to Student Management System.");
                 System.out.println("Please select: 1.add student 2.delete student 3.modify student 4.query student information 5.exit");
